@@ -1,0 +1,106 @@
+# depslib dependency file v1.0
+1394844721 source:c:\users\manuel\documents\codeblock\debug\main.cpp
+	"SDL/SDL.h"
+	"Juego.h"
+	"Menu.h"
+	<iostream>
+
+1395637871 source:c:\users\manuel\documents\codeblock\debug\juego.cpp
+	"Juego.h"
+
+1394839695 c:\users\manuel\documents\codeblock\debug\juego.h
+	"SDL/SDL.h"
+	"SDL/SDL_image.h"
+	"SDL/SDL_ttf.h"
+	"Mapa.h"
+	"Jugador.h"
+
+1395637048 c:\users\manuel\documents\codeblock\debug\mapa.h
+	"SDL/SDL.h"
+	"SDL/SDL_image.h"
+	<fstream>
+	<iostream>
+	<vector>
+	"Plataforma.h"
+	"PlataformaMovible.h"
+	"PlataformaInvisible.h"
+	"Enemigo.h"
+	"Planta.h"
+	"Bomba.h"
+	"Tile.h"
+	"Padre.h"
+
+1392440311 c:\users\manuel\documents\codeblock\debug\tile.h
+
+1395637147 source:c:\users\manuel\documents\codeblock\debug\mapa.cpp
+	"Mapa.h"
+
+1392440349 source:c:\users\manuel\documents\codeblock\debug\tile.cpp
+	"Tile.h"
+
+1395635799 source:c:\users\manuel\documents\codeblock\debug\padre.cpp
+	"Padre.h"
+
+1394861373 c:\users\manuel\documents\codeblock\debug\padre.h
+	"SDL/SDL.h"
+	"SDL/SDL_image.h"
+	"Tile.h"
+	<vector>
+
+1395637766 c:\users\manuel\documents\codeblock\debug\jugador.h
+	"Padre.h"
+	"Plataforma.h"
+	"PlataformaInvisible.h"
+	"Enemigo.h"
+	"Bomba.h"
+
+1395638813 source:c:\users\manuel\documents\codeblock\debug\jugador.cpp
+	"Jugador.h"
+
+1394898891 source:c:\users\manuel\documents\codeblock\debug\plataforma.cpp
+	"Plataforma.h"
+
+1394896935 c:\users\manuel\documents\codeblock\debug\plataforma.h
+	"SDL/SDL.h"
+	"SDL/SDL_image.h"
+	<iostream>
+
+1394851539 source:c:\users\manuel\documents\codeblock\debug\menu.cpp
+	"Menu.h"
+
+1394848975 c:\users\manuel\documents\codeblock\debug\menu.h
+	"SDL/SDL.h"
+	"SDL/SDL_image.h"
+	"SDL/SDL_ttf.h"
+	<fstream>
+
+1394896658 source:c:\users\manuel\documents\codeblock\debug\plataformamovible.cpp
+	"PlataformaMovible.h"
+
+1394855426 c:\users\manuel\documents\codeblock\debug\plataformamovible.h
+	"Plataforma.h"
+
+1395625512 source:c:\users\manuel\documents\codeblock\debug\plataformainvisible.cpp
+	"PlataformaInvisible.h"
+
+1394901078 c:\users\manuel\documents\codeblock\debug\plataformainvisible.h
+	"Plataforma.h"
+
+1395635509 source:c:\users\manuel\documents\codeblock\debug\enemigo.cpp
+	"Enemigo.h"
+
+1395635608 c:\users\manuel\documents\codeblock\debug\enemigo.h
+	"Padre.h"
+
+1395637227 source:c:\users\manuel\documents\codeblock\debug\bomba.cpp
+	"Bomba.h"
+
+1395637048 c:\users\manuel\documents\codeblock\debug\bomba.h
+	"Enemigo.h"
+
+1395636285 source:c:\users\manuel\documents\codeblock\debug\planta.cpp
+	"Planta.h"
+
+1395636285 c:\users\manuel\documents\codeblock\debug\planta.h
+	"Enemigo.h"
+
