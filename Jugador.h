@@ -10,7 +10,7 @@ class Jugador : public Padre
 {
     public:
         int xvel, yvel, xacc, yacc, xCamara, yCamara, cVel, cVel2;
-        bool suelo, saltando, colD, moviendo;
+        bool suelo, saltando, colD, moviendo, gameOver;
         Jugador();
         virtual ~Jugador();
         void mostrar(SDL_Surface* screen, int xMapa, int yMapa);

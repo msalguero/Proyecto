@@ -16,6 +16,7 @@ Jugador::Jugador()
     saltando = false;
     colD = false;
     moviendo = false;
+    gameOver = false;
     imagen = IMG_Load("player.png");
     for(int i = 0; i<sprites ; i++)
     {
@@ -44,6 +45,8 @@ void Jugador::mover(vector<Enemigo*> enemigos, vector<Plataforma*> plataformas, 
 {
     bool colision = false;
     bool piso = false;
+    if(coordY > 480)
+        gameOver = true;
     if(enemigos.size() == 0)
         exit(0);
     for(int i = 0; i<enemigos.size(); i++)
@@ -52,7 +55,7 @@ void Jugador::mover(vector<Enemigo*> enemigos, vector<Plataforma*> plataformas, 
             continue;
         if(colisionBasica(coordX, coordY, enemigos[i]->coordX, enemigos[i]->coordY, 40, 40))
             {
-                if(yvel >0 && coordY+40>=enemigos[i]->coordY)
+                if(enemigos[i]->tipo == 0&& yvel >0 && coordY+40>=enemigos[i]->coordY)
                 {
                     saltando = true;
                     suelo = false;
@@ -63,7 +66,7 @@ void Jugador::mover(vector<Enemigo*> enemigos, vector<Plataforma*> plataformas, 
                 }
                 else
                 {
-
+                    gameOver = true;
                 }
             }
     }

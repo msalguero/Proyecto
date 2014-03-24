@@ -35,7 +35,6 @@ int main( int argc, char* args[] )
                 running = false;
             }
 
-
         }
         platform.logica();
 
@@ -44,6 +43,8 @@ int main( int argc, char* args[] )
         {
             SDL_Delay(1000/30-(SDL_GetTicks()-start));
         }
+        //if(platform.gameOver)
+            //menu.terminar = platform.restart;
     }
     return 0;
 }

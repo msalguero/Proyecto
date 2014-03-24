@@ -5,11 +5,14 @@
 #include "SDL/SDL_ttf.h"
 #include "Mapa.h"
 #include "Jugador.h"
+#include <sstream>
+
+using namespace std;
 
 class Juego
 {
     public:
-        bool moviendo;
+        bool moviendo, gameOver, restart;
         char direccion;
         Mapa* mapa;
         Jugador* jugador1;
@@ -24,10 +27,11 @@ class Juego
         void logica();
         void render();
         void eventos(SDL_Event* evento);
+        void restartGame();
         SDL_Surface* getScreen();
     protected:
     private:
-        SDL_Surface* screen, *background, *text;
+        SDL_Surface* screen, *background, *text, *loseScreen;
         SDL_Rect camara;
 };
 

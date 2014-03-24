@@ -104,3 +104,109 @@
 1395636285 c:\users\manuel\documents\codeblock\debug\planta.h
 	"Enemigo.h"
 
+1395640460 source:c:\users\salguero\documents\proyectplatformer\bomba.cpp
+	"Bomba.h"
+
+1395640460 c:\users\salguero\documents\proyectplatformer\bomba.h
+	"Enemigo.h"
+
+1395640460 c:\users\salguero\documents\proyectplatformer\enemigo.h
+	"Padre.h"
+
+1395640460 c:\users\salguero\documents\proyectplatformer\padre.h
+	"SDL/SDL.h"
+	"SDL/SDL_image.h"
+	"Tile.h"
+	<vector>
+
+1395640460 c:\users\salguero\documents\proyectplatformer\tile.h
+
+1395640460 source:c:\users\salguero\documents\proyectplatformer\enemigo.cpp
+	"Enemigo.h"
+
+1395668932 source:c:\users\salguero\documents\proyectplatformer\juego.cpp
+	"Juego.h"
+
+1395698010 c:\users\salguero\documents\proyectplatformer\juego.h
+	"SDL/SDL.h"
+	"SDL/SDL_image.h"
+	"SDL/SDL_ttf.h"
+	"Mapa.h"
+	"Jugador.h"
+	<sstream>
+
+1395640460 c:\users\salguero\documents\proyectplatformer\mapa.h
+	"SDL/SDL.h"
+	"SDL/SDL_image.h"
+	<fstream>
+	<iostream>
+	<vector>
+	"Plataforma.h"
+	"PlataformaMovible.h"
+	"PlataformaInvisible.h"
+	"Enemigo.h"
+	"Planta.h"
+	"Bomba.h"
+	"Tile.h"
+	"Padre.h"
+
+1395640460 c:\users\salguero\documents\proyectplatformer\plataforma.h
+	"SDL/SDL.h"
+	"SDL/SDL_image.h"
+	<iostream>
+
+1395640460 c:\users\salguero\documents\proyectplatformer\plataformamovible.h
+	"Plataforma.h"
+
+1395640460 c:\users\salguero\documents\proyectplatformer\plataformainvisible.h
+	"Plataforma.h"
+
+1395640460 c:\users\salguero\documents\proyectplatformer\planta.h
+	"Enemigo.h"
+
+1395665781 c:\users\salguero\documents\proyectplatformer\jugador.h
+	"Padre.h"
+	"Plataforma.h"
+	"PlataformaInvisible.h"
+	"Enemigo.h"
+	"Bomba.h"
+
+1395669323 source:c:\users\salguero\documents\proyectplatformer\main.cpp
+	"SDL/SDL.h"
+	"Juego.h"
+	"Menu.h"
+	<iostream>
+
+1395640460 c:\users\salguero\documents\proyectplatformer\menu.h
+	"SDL/SDL.h"
+	"SDL/SDL_image.h"
+	"SDL/SDL_ttf.h"
+	<fstream>
+
+1395640460 source:c:\users\salguero\documents\proyectplatformer\mapa.cpp
+	"Mapa.h"
+
+1395640460 source:c:\users\salguero\documents\proyectplatformer\menu.cpp
+	"Menu.h"
+
+1395640460 source:c:\users\salguero\documents\proyectplatformer\padre.cpp
+	"Padre.h"
+
+1395640460 source:c:\users\salguero\documents\proyectplatformer\planta.cpp
+	"Planta.h"
+
+1395640460 source:c:\users\salguero\documents\proyectplatformer\plataforma.cpp
+	"Plataforma.h"
+
+1395640460 source:c:\users\salguero\documents\proyectplatformer\plataformainvisible.cpp
+	"PlataformaInvisible.h"
+
+1395640460 source:c:\users\salguero\documents\proyectplatformer\plataformamovible.cpp
+	"PlataformaMovible.h"
+
+1395640460 source:c:\users\salguero\documents\proyectplatformer\tile.cpp
+	"Tile.h"
+
+1395669497 source:c:\users\salguero\documents\proyectplatformer\jugador.cpp
+	"Jugador.h"
+
