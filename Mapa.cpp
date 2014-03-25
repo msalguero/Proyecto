@@ -9,6 +9,7 @@ Mapa::Mapa(int h,int w)
     imagen = IMG_Load("Tiles.png");
     enemigoIMG[0] = IMG_Load("Planta.png");
     enemigoIMG[1] = IMG_Load("Bomba.png");
+    imgTorre = IMG_Load("Torre.png");
 }
 
 Mapa::~Mapa()
@@ -65,6 +66,13 @@ void Mapa::applySurface(int x, int y, SDL_Surface* source, SDL_Surface* destinat
     clip.x = (tipoT-1)*50;
     clip.y = 0;
     clip.w = clip.h = 50;
+    if(tipoT == 4)
+    {
+        source = imgTorre;
+        clip.x = 0;
+        clip.w = 150;
+        clip.h = 200;
+    }
 
     SDL_BlitSurface( source, &clip, destination, &offset );
 }

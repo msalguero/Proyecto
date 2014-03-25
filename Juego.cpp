@@ -9,12 +9,13 @@ Juego::Juego()
     screen = SDL_SetVideoMode(WIDTH, HEIGHT, 32, SDL_SWSURFACE);
     background = IMG_Load("endless.png");
     loseScreen = IMG_Load("gameOver.jpg");
+    victoryScreen = IMG_Load("winner.jpg");
     yMapa = xMapa = camara.x = camara.y = 0;
     camara.w = WIDTH;
     camara.h = HEIGHT;
     moviendo = false;
     gameOver = false;
-    restart = false;
+    restart = true;
     direccion = 'r';
     mapa = new Mapa(11, 50);
     mapa->crear("demo.txt");
@@ -72,7 +73,18 @@ void Juego::moverCamara()
 
 void Juego::render()
 {
-    if(gameOver)
+    if(jugador1->coordX>2400)
+    {
+        SDL_Rect offset;
+
+        offset.x = 150;
+        offset.y = 50;
+
+        SDL_BlitSurface(victoryScreen, NULL, screen, &offset);
+        SDL_Flip(screen);
+        return ;
+    }
+    else if(gameOver)
     {
         SDL_Rect offset;
 
@@ -93,7 +105,7 @@ void Juego::render()
 //    char c2[] = {'s','c','o','r','e'};
 //    strcat(c2, c);
     std::stringstream strmSc;
-    strmSc <<"Score: "<<xMapa;
+    strmSc <<"Score: "<<jugador1->score;
 
     SDL_Color color = {0,0,0};
     SDL_Surface* text = TTF_RenderText_Solid(font, strmSc.str().c_str(), color);
@@ -105,6 +117,8 @@ void Juego::render()
 
 void Juego::logica()
 {
+    if(jugador1->coordX>2400)
+        return;
     jugador1->mover(mapa->enemigos, mapa->plataformas, mapa->tiles, xMapa, yMapa, &camara.x, &xMapa);
     jugador1->setFrame(direccion);
     gameOver = jugador1->gameOver;
@@ -134,6 +148,11 @@ void Juego::eventos(SDL_Event* evento)
         case SDLK_RETURN :
             if(gameOver)
                 restartGame();
+            else if(jugador1->coordX>2400)
+            {
+                escribirScores();
+                restartGame();
+            }
             break;
         default :;
         }
@@ -163,7 +182,7 @@ SDL_Surface* Juego::getScreen()
 
 void Juego::restartGame()
 {
-    restart = true;
+    restart = false;
     delete mapa;
     delete jugador1;
     yMapa = xMapa = camara.x = camara.y = 0;
@@ -173,4 +192,38 @@ void Juego::restartGame()
     mapa = new Mapa(11, 50);
     mapa->crear("demo.txt");
     jugador1 = new Jugador();
+}
+
+void Juego::escribirScores()
+{
+    string names[3];
+    int scores[3];
+    ifstream in("Scores.txt");
+    if(in == NULL)
+        return;
+    int cont = 0;
+    while(in>>names[cont] && in>>scores[cont])
+    {
+        cont++;
+    }
+    in.close();
+    for(int i = 0; i<3; i++)
+    {
+        if(jugador1->score > scores[i])
+        {
+            scores[i] = jugador1->score;
+            break;
+        }
+    }
+    ofstream out("Scores.txt");
+    if(out == NULL)
+        return;
+    for(int i = 0; i<3; i++)
+    {
+        out<<names[i];
+        out<<" ";
+        out<<scores[i];
+        out<<" ";
+    }
+    out.close();
 }

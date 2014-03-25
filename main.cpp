@@ -21,9 +21,15 @@ int main( int argc, char* args[] )
             while(SDL_PollEvent(&event))
             {
                 menu.eventos(&event);
+                switch(event.type)
+                {
+                    case SDL_QUIT :
+                        running = false;
+                }
             }
             continue;
         }
+        platform.restart = true;
         start = SDL_GetTicks();
 
         while(SDL_PollEvent(&event))
@@ -44,7 +50,7 @@ int main( int argc, char* args[] )
             SDL_Delay(1000/30-(SDL_GetTicks()-start));
         }
         //if(platform.gameOver)
-            //menu.terminar = platform.restart;
+        menu.terminar = platform.restart;
     }
     return 0;
 }

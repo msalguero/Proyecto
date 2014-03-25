@@ -12,6 +12,8 @@ Jugador::Jugador()
     yacc = 5;
     cVel = 0;
     cVel2 = 0;
+    score = 0;
+    perdiste = false;
     suelo = false;
     saltando = false;
     colD = false;
@@ -24,6 +26,9 @@ Jugador::Jugador()
         clips[i].y = 6;
         clips[i].h = clips[i].w = 40;
     }
+    clips[10].x = 36;
+    clips[10].y = 50;
+    clips[10].h = clips[10].w = 40;
 }
 
 Jugador::~Jugador()
@@ -45,6 +50,7 @@ void Jugador::mover(vector<Enemigo*> enemigos, vector<Plataforma*> plataformas, 
 {
     bool colision = false;
     bool piso = false;
+
     if(coordY > 480)
         gameOver = true;
     if(enemigos.size() == 0)
@@ -57,6 +63,7 @@ void Jugador::mover(vector<Enemigo*> enemigos, vector<Plataforma*> plataformas, 
             {
                 if(enemigos[i]->tipo == 0&& yvel >0 && coordY+40>=enemigos[i]->coordY)
                 {
+                    score+=100;
                     saltando = true;
                     suelo = false;
                     coordY-=10;
@@ -66,7 +73,7 @@ void Jugador::mover(vector<Enemigo*> enemigos, vector<Plataforma*> plataformas, 
                 }
                 else
                 {
-                    gameOver = true;
+                    perdiste = true;
                 }
             }
     }
@@ -151,6 +158,12 @@ void Jugador::mover(vector<Enemigo*> enemigos, vector<Plataforma*> plataformas, 
             }
 
     }
+    if(perdiste)
+    {
+        coordY+=4;
+        yCamara+=4;
+        return ;
+    }
     if(!colision)
     {
         suelo = false;
@@ -167,12 +180,12 @@ void Jugador::mover(vector<Enemigo*> enemigos, vector<Plataforma*> plataformas, 
     yCamara += yvel;
     *Camara+= cVel2;
     *xMap += cVel2;
-    for(int i = 0; i<sprites ; i++)
-    {
-        clips[i].x = (i * 40)+35;
-        clips[i].y = 6;
-        clips[i].h = clips[i].w = 40;
-    }
+//    for(int i = 0; i<sprites ; i++)
+//    {
+//        clips[i].x = (i * 40)+35;
+//        clips[i].y = 6;
+//        clips[i].h = clips[i].w = 40;
+//    }
 }
 
 void Jugador::saltar()
@@ -216,4 +229,6 @@ void Jugador::setFrame(char direction)
                 frame = 0;
             else
                 frame = 7;
+    if(perdiste)
+        frame = 10;
 }

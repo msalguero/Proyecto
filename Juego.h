@@ -28,10 +28,11 @@ class Juego
         void render();
         void eventos(SDL_Event* evento);
         void restartGame();
+        void escribirScores();
         SDL_Surface* getScreen();
     protected:
     private:
-        SDL_Surface* screen, *background, *text, *loseScreen;
+        SDL_Surface* screen, *background, *text, *loseScreen, *victoryScreen;
         SDL_Rect camara;
 };
 

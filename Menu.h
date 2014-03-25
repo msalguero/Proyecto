@@ -4,6 +4,7 @@
 #include "SDL/SDL_image.h"
 #include "SDL/SDL_ttf.h"
 #include <fstream>
+#include "CreaMapas.h"
 
 using namespace std;
 
@@ -22,6 +23,8 @@ class Menu
         SDL_Surface *botones;
         SDL_Surface *screen;
         TTF_Font *font = NULL;
+        CreaMapas *creador;
+
         Menu(SDL_Surface* sc);
         virtual ~Menu();
 

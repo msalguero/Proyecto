@@ -1,21 +1,22 @@
 # depslib dependency file v1.0
-1394844721 source:c:\users\manuel\documents\codeblock\debug\main.cpp
+1395724289 source:c:\users\manuel\documents\codeblock\debug\main.cpp
 	"SDL/SDL.h"
 	"Juego.h"
 	"Menu.h"
 	<iostream>
 
-1395637871 source:c:\users\manuel\documents\codeblock\debug\juego.cpp
+1395723972 source:c:\users\manuel\documents\codeblock\debug\juego.cpp
 	"Juego.h"
 
-1394839695 c:\users\manuel\documents\codeblock\debug\juego.h
+1395707100 c:\users\manuel\documents\codeblock\debug\juego.h
 	"SDL/SDL.h"
 	"SDL/SDL_image.h"
 	"SDL/SDL_ttf.h"
 	"Mapa.h"
 	"Jugador.h"
+	<sstream>
 
-1395637048 c:\users\manuel\documents\codeblock\debug\mapa.h
+1395703534 c:\users\manuel\documents\codeblock\debug\mapa.h
 	"SDL/SDL.h"
 	"SDL/SDL_image.h"
 	<fstream>
@@ -32,7 +33,7 @@
 
 1392440311 c:\users\manuel\documents\codeblock\debug\tile.h
 
-1395637147 source:c:\users\manuel\documents\codeblock\debug\mapa.cpp
+1395704055 source:c:\users\manuel\documents\codeblock\debug\mapa.cpp
 	"Mapa.h"
 
 1392440349 source:c:\users\manuel\documents\codeblock\debug\tile.cpp
@@ -47,14 +48,14 @@
 	"Tile.h"
 	<vector>
 
-1395637766 c:\users\manuel\documents\codeblock\debug\jugador.h
+1395705824 c:\users\manuel\documents\codeblock\debug\jugador.h
 	"Padre.h"
 	"Plataforma.h"
 	"PlataformaInvisible.h"
 	"Enemigo.h"
 	"Bomba.h"
 
-1395638813 source:c:\users\manuel\documents\codeblock\debug\jugador.cpp
+1395705986 source:c:\users\manuel\documents\codeblock\debug\jugador.cpp
 	"Jugador.h"
 
 1394898891 source:c:\users\manuel\documents\codeblock\debug\plataforma.cpp
@@ -65,14 +66,15 @@
 	"SDL/SDL_image.h"
 	<iostream>
 
-1394851539 source:c:\users\manuel\documents\codeblock\debug\menu.cpp
+1395728588 source:c:\users\manuel\documents\codeblock\debug\menu.cpp
 	"Menu.h"
 
-1394848975 c:\users\manuel\documents\codeblock\debug\menu.h
+1395728554 c:\users\manuel\documents\codeblock\debug\menu.h
 	"SDL/SDL.h"
 	"SDL/SDL_image.h"
 	"SDL/SDL_ttf.h"
 	<fstream>
+	"CreaMapas.h"
 
 1394896658 source:c:\users\manuel\documents\codeblock\debug\plataformamovible.cpp
 	"PlataformaMovible.h"
@@ -209,4 +211,18 @@
 
 1395669497 source:c:\users\salguero\documents\proyectplatformer\jugador.cpp
 	"Jugador.h"
+
+1395728365 source:c:\users\manuel\documents\codeblock\debug\creamapas.cpp
+	"CreaMapas.h"
+
+1395728218 c:\users\manuel\documents\codeblock\debug\creamapas.h
+	"Mapa.h"
+	"Padre.h"
+	"Plataforma.h"
+	"PlataformaMovible.h"
+	"PlataformaInvisible.h"
+	"Enemigo.h"
+	"Bomba.h"
+	"Planta.h"
+	"Tile.h"
 

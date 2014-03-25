@@ -24,7 +24,7 @@ class Mapa : public Padre
         vector<Enemigo*> enemigos;
         int height;
         int width;
-        SDL_Surface* imagen, *IMGplataformas[2], *ambiente, *enemigoIMG[2];
+        SDL_Surface* imagen, *IMGplataformas[2], *ambiente, *enemigoIMG[2], *imgTorre;
         Mapa(int h,int w);
         virtual ~Mapa();
 

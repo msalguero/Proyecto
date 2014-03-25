@@ -9,8 +9,8 @@
 class Jugador : public Padre
 {
     public:
-        int xvel, yvel, xacc, yacc, xCamara, yCamara, cVel, cVel2;
-        bool suelo, saltando, colD, moviendo, gameOver;
+        int xvel, yvel, xacc, yacc, xCamara, yCamara, cVel, cVel2, score;
+        bool suelo, saltando, colD, moviendo, gameOver, perdiste;
         Jugador();
         virtual ~Jugador();
         void mostrar(SDL_Surface* screen, int xMapa, int yMapa);
@@ -20,7 +20,7 @@ class Jugador : public Padre
         void setFrame(char direction);
     protected:
     private:
-        static const int sprites = 10;
+        static const int sprites = 11;
         SDL_Rect clips[sprites];
         double frame;
 };

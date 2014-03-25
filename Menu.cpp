@@ -8,6 +8,7 @@ Menu::Menu(SDL_Surface* sc)
     instrucciones = IMG_Load("instrucciones.png");
     font = TTF_OpenFont("Frijole-Regular.ttf", 32);
     screen = sc;
+    creador = new CreaMapas(screen);
     terminar = false;
     instr = false;
     score = false;
@@ -53,6 +54,10 @@ void Menu::eventos(SDL_Event* evento)
                 instr = !instr;
             else if(seleccion == 3)
                 score = !score;
+            else if(seleccion == 4)
+            {
+                creador->loop();
+            }
             break;
         default :;
         }
@@ -130,4 +135,5 @@ void Menu::leerScore()
     {
         cont++;
     }
+    in.close();
 }

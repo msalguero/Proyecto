@@ -1,1 +1,1 @@
-aaa 10 bbb 20 ccc 15
+aaa 300 bbb 300 ccc 100 
