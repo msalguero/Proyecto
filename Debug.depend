@@ -126,10 +126,10 @@
 1395640460 source:c:\users\salguero\documents\proyectplatformer\enemigo.cpp
 	"Enemigo.h"
 
-1395668932 source:c:\users\salguero\documents\proyectplatformer\juego.cpp
+1395750817 source:c:\users\salguero\documents\proyectplatformer\juego.cpp
 	"Juego.h"
 
-1395698010 c:\users\salguero\documents\proyectplatformer\juego.h
+1395750817 c:\users\salguero\documents\proyectplatformer\juego.h
 	"SDL/SDL.h"
 	"SDL/SDL_image.h"
 	"SDL/SDL_ttf.h"
@@ -137,7 +137,7 @@
 	"Jugador.h"
 	<sstream>
 
-1395640460 c:\users\salguero\documents\proyectplatformer\mapa.h
+1395750817 c:\users\salguero\documents\proyectplatformer\mapa.h
 	"SDL/SDL.h"
 	"SDL/SDL_image.h"
 	<fstream>
@@ -166,29 +166,30 @@
 1395640460 c:\users\salguero\documents\proyectplatformer\planta.h
 	"Enemigo.h"
 
-1395665781 c:\users\salguero\documents\proyectplatformer\jugador.h
+1395750817 c:\users\salguero\documents\proyectplatformer\jugador.h
 	"Padre.h"
 	"Plataforma.h"
 	"PlataformaInvisible.h"
 	"Enemigo.h"
 	"Bomba.h"
 
-1395669323 source:c:\users\salguero\documents\proyectplatformer\main.cpp
+1395750818 source:c:\users\salguero\documents\proyectplatformer\main.cpp
 	"SDL/SDL.h"
 	"Juego.h"
 	"Menu.h"
 	<iostream>
 
-1395640460 c:\users\salguero\documents\proyectplatformer\menu.h
+1395750817 c:\users\salguero\documents\proyectplatformer\menu.h
 	"SDL/SDL.h"
 	"SDL/SDL_image.h"
 	"SDL/SDL_ttf.h"
 	<fstream>
+	"CreaMapas.h"
 
-1395640460 source:c:\users\salguero\documents\proyectplatformer\mapa.cpp
+1395750817 source:c:\users\salguero\documents\proyectplatformer\mapa.cpp
 	"Mapa.h"
 
-1395640460 source:c:\users\salguero\documents\proyectplatformer\menu.cpp
+1395750817 source:c:\users\salguero\documents\proyectplatformer\menu.cpp
 	"Menu.h"
 
 1395640460 source:c:\users\salguero\documents\proyectplatformer\padre.cpp
@@ -209,13 +210,27 @@
 1395640460 source:c:\users\salguero\documents\proyectplatformer\tile.cpp
 	"Tile.h"
 
-1395669497 source:c:\users\salguero\documents\proyectplatformer\jugador.cpp
+1395750817 source:c:\users\salguero\documents\proyectplatformer\jugador.cpp
 	"Jugador.h"
 
 1395728365 source:c:\users\manuel\documents\codeblock\debug\creamapas.cpp
 	"CreaMapas.h"
 
 1395728218 c:\users\manuel\documents\codeblock\debug\creamapas.h
+	"Mapa.h"
+	"Padre.h"
+	"Plataforma.h"
+	"PlataformaMovible.h"
+	"PlataformaInvisible.h"
+	"Enemigo.h"
+	"Bomba.h"
+	"Planta.h"
+	"Tile.h"
+
+1395765015 source:c:\users\salguero\documents\proyectplatformer\creamapas.cpp
+	"CreaMapas.h"
+
+1395752809 c:\users\salguero\documents\proyectplatformer\creamapas.h
 	"Mapa.h"
 	"Padre.h"
 	"Plataforma.h"

@@ -14,6 +14,7 @@ class CreaMapas
 {
     public:
         int xMapa, yMapa;
+        int vel, seleccion;
         static const int WIDTH = 50;
         static const int HEIGHT = 11;
         int mapa[HEIGHT][WIDTH];
@@ -26,8 +27,12 @@ class CreaMapas
         void loop();
         void render();
         void applySurface(int x, int y, SDL_Rect* clip);
+        void escribirMapa();
+        void eventos(SDL_Event* evento);
+        void moverCamara();
     protected:
     private:
+        bool puntoEstaDentroDeCaja(int p_x,int p_y,int c_x,int c_y,int c_h,int c_w);
 };
 
 #endif // CREAMAPAS_H
