@@ -6,6 +6,7 @@ Juego::Juego()
     SDL_Init(SDL_INIT_EVERYTHING);
     TTF_Init();
 
+    nivel = 0;
     screen = SDL_SetVideoMode(WIDTH, HEIGHT, 32, SDL_SWSURFACE);
     background = IMG_Load("endless.png");
     loseScreen = IMG_Load("gameOver.jpg");
@@ -17,8 +18,10 @@ Juego::Juego()
     gameOver = false;
     restart = true;
     direccion = 'r';
+    area[0] = "demo.txt";
+    area[1] = "Nivel2.txt";
     mapa = new Mapa(11, 50);
-    mapa->crear("demo.txt");
+    mapa->crear(area[nivel].c_str());
     jugador1 = new Jugador();
     font = TTF_OpenFont("SMB.ttf", 32);
 }
@@ -39,27 +42,27 @@ void Juego::moverCamara()
     if(jugador1->moviendo && direccion == 'i')
     {
 
-        jugador1->xvel=-2;
+        jugador1->xvel=-4;
         if(jugador1->xCamara<150)
             {
-                jugador1->cVel2 = -2;
+                jugador1->cVel2 = -4;
                 jugador1->cVel=0;
             }
         else if(jugador1->moviendo)
-            jugador1->cVel=-2;
+            jugador1->cVel=-4;
 
         if(camara.x<0)
             camara.x = 2688-WIDTH;
     }else if(jugador1->moviendo && direccion == 'd')
     {
-        jugador1->xvel=2;
+        jugador1->xvel=4;
         if(jugador1->xCamara>400)
             {
                 jugador1->cVel=0;
-                jugador1->cVel2=2;
+                jugador1->cVel2=4;
             }
         else if(jugador1->moviendo)
-            jugador1->cVel=2;
+            jugador1->cVel=4;
 
         if(camara.x >= 2688-WIDTH)
             camara.x = 0;
@@ -182,6 +185,10 @@ SDL_Surface* Juego::getScreen()
 
 void Juego::restartGame()
 {
+    if(!gameOver)
+        nivel++;
+    if(nivel == 2)
+        nivel = 0;
     restart = false;
     delete mapa;
     delete jugador1;
@@ -190,7 +197,7 @@ void Juego::restartGame()
     gameOver = false;
     direccion = 'r';
     mapa = new Mapa(11, 50);
-    mapa->crear("demo.txt");
+    mapa->crear(area[nivel].c_str());
     jugador1 = new Jugador();
 }
 
@@ -198,22 +205,32 @@ void Juego::escribirScores()
 {
     string names[3];
     int scores[3];
+    int temp[3];
     ifstream in("Scores.txt");
     if(in == NULL)
         return;
     int cont = 0;
     while(in>>names[cont] && in>>scores[cont])
     {
+        temp[cont] = scores[cont];
         cont++;
     }
     in.close();
-    for(int i = 0; i<3; i++)
+    //ordenamiento cortesia de Fabian
+    if(jugador1->score > scores[0])
     {
-        if(jugador1->score > scores[i])
-        {
-            scores[i] = jugador1->score;
-            break;
-        }
+            scores[0] = jugador1->score;
+            scores[1] = temp[0];
+            scores[2] = temp[1];
+    }
+    else if(jugador1->score > scores[1])
+    {
+        scores[1] = jugador1->score;
+        scores[2] = temp[1];
+    }
+    else if(jugador1->score > scores[2])
+    {
+        scores[2] = jugador1->score;
     }
     ofstream out("Scores.txt");
     if(out == NULL)

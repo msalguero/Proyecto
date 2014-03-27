@@ -28,7 +28,7 @@ class Mapa : public Padre
         Mapa(int h,int w);
         virtual ~Mapa();
 
-        void crear(char* File);
+        void crear(const char* File);
         void render(SDL_Surface* screen, int xMapa, int yMapa);
     protected:
     private:

@@ -12,6 +12,8 @@ using namespace std;
 class Juego
 {
     public:
+        string area[2];
+        int nivel;
         bool moviendo, gameOver, restart;
         char direccion;
         Mapa* mapa;

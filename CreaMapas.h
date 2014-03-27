@@ -13,12 +13,13 @@
 class CreaMapas
 {
     public:
-        int xMapa, yMapa;
+        int xMapa, yMapa, mouseX, mouseY;
         int vel, seleccion;
         static const int WIDTH = 50;
         static const int HEIGHT = 11;
         int mapa[HEIGHT][WIDTH];
-        SDL_Surface* screen, *background, *source;
+        bool click;
+        SDL_Surface* screen, *background, *source, *tiles, *mouse;
         SDL_Rect camara;
 
         CreaMapas(SDL_Surface* screen);
@@ -32,6 +33,8 @@ class CreaMapas
         void moverCamara();
     protected:
     private:
+        void renderTileChooser();
+        void renderMouse();
         bool puntoEstaDentroDeCaja(int p_x,int p_y,int c_x,int c_y,int c_h,int c_w);
 };
 

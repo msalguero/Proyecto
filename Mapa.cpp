@@ -77,7 +77,7 @@ void Mapa::applySurface(int x, int y, SDL_Surface* source, SDL_Surface* destinat
     SDL_BlitSurface( source, &clip, destination, &offset );
 }
 
-void Mapa::crear(char* File)
+void Mapa::crear(const char* File)
 {
      ifstream in(File);
     if(in == NULL)

@@ -126,10 +126,10 @@
 1395640460 source:c:\users\salguero\documents\proyectplatformer\enemigo.cpp
 	"Enemigo.h"
 
-1395750817 source:c:\users\salguero\documents\proyectplatformer\juego.cpp
+1395947695 source:c:\users\salguero\documents\proyectplatformer\juego.cpp
 	"Juego.h"
 
-1395750817 c:\users\salguero\documents\proyectplatformer\juego.h
+1395815862 c:\users\salguero\documents\proyectplatformer\juego.h
 	"SDL/SDL.h"
 	"SDL/SDL_image.h"
 	"SDL/SDL_ttf.h"
@@ -137,7 +137,7 @@
 	"Jugador.h"
 	<sstream>
 
-1395750817 c:\users\salguero\documents\proyectplatformer\mapa.h
+1395815356 c:\users\salguero\documents\proyectplatformer\mapa.h
 	"SDL/SDL.h"
 	"SDL/SDL_image.h"
 	<fstream>
@@ -186,7 +186,7 @@
 	<fstream>
 	"CreaMapas.h"
 
-1395750817 source:c:\users\salguero\documents\proyectplatformer\mapa.cpp
+1395815356 source:c:\users\salguero\documents\proyectplatformer\mapa.cpp
 	"Mapa.h"
 
 1395750817 source:c:\users\salguero\documents\proyectplatformer\menu.cpp
@@ -227,10 +227,10 @@
 	"Planta.h"
 	"Tile.h"
 
-1395765015 source:c:\users\salguero\documents\proyectplatformer\creamapas.cpp
+1395843882 source:c:\users\salguero\documents\proyectplatformer\creamapas.cpp
 	"CreaMapas.h"
 
-1395752809 c:\users\salguero\documents\proyectplatformer\creamapas.h
+1395843528 c:\users\salguero\documents\proyectplatformer\creamapas.h
 	"Mapa.h"
 	"Padre.h"
 	"Plataforma.h"
